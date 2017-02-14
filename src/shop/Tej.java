@@ -7,19 +7,32 @@ import java.util.Date;
  */
 public class Tej
 {
+    private long vonalKod;
+    private final int LITER = 4;
+    private final int FELLITER = 2;
+    private final int POHAR = 1;
+    private final double ZSIROS = 3.6;
+    private final double FELZSIROS = 2.8;
+
     private int urtartalom;
     private String gyarto;
     private Date szavatossagIdo;
     private double zsirtartalom;
     private long ar;
 
-    public Tej(int urtartalom, String gyarto, Date szavatossagIdo, double zsirtartalom, long ar)
+    public Tej(long vonalKod, int urtartalom, String gyarto, Date szavatossagIdo, double zsirtartalom, long ar)
     {
+        this.vonalKod = vonalKod;
         this.urtartalom = urtartalom;
         this.gyarto = gyarto;
         this.szavatossagIdo = szavatossagIdo;
         this.zsirtartalom = zsirtartalom;
         this.ar = ar;
+    }
+
+    public long getVonalKod()
+    {
+        return vonalKod;
     }
 
     public boolean joMeg()

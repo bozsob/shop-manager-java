@@ -1,5 +1,7 @@
 package shop;
 
+import java.util.Hashtable;
+import java.util.Map;
 import java.util.Vector;
 
 /**
@@ -10,11 +12,11 @@ public class Bolt
     private String nev;
     private String cim;
     private String tulajdonos;
-    private Vector<Tej> tejpult;
+    private Hashtable<Tej, Integer> tejpult;
     private int flag;
 
 
-    public Bolt(String nev, String cim, String tulajdonos, Vector<Tej> tejpult)
+    public Bolt(String nev, String cim, String tulajdonos, Hashtable<Tej, Integer> tejpult)
     {
         this.nev = nev;
         this.cim = cim;
@@ -50,14 +52,30 @@ public class Bolt
         return  false;
     }
 
-    public Tej vasarolTej(Tej m)
+    public Tej vasarolTej(long vonalKod)
     {
-        return tejpult.;
+        for (Map.Entry<Tej, Integer> entry : tejpult.entrySet())
+        {
+            if(entry.getKey().getVonalKod() == vonalKod)
+                tejpult.put(entry.getKey(), entry.getValue() - 1);
+                return entry.getKey();
+        }
+        return null;
+
     }
 
     public void feltoltTej(Tej m)
     {
-        tejpult.add(m);
+
+        if(tejpult.containsKey(m))
+        {
+            Integer value = tejpult.get(m);
+            tejpult.put(m, ++value);
+        }
+        else
+        {
+            tejpult.put(m, 1);
+        }
     }
 
 
