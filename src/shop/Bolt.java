@@ -13,7 +13,7 @@ public class Bolt
     private String cim;
     private String tulajdonos;
     private Hashtable<Tej, Integer> tejpult;
-    private int flag;
+    //private int flag;
 
 
     public Bolt(String nev, String cim, String tulajdonos, Hashtable<Tej, Integer> tejpult)
@@ -78,5 +78,55 @@ public class Bolt
         }
     }
 
+    public class BoltBejegyzes
+    {
 
+        private Tej t;
+        private int mennyiseg = 0;
+        private int ar;
+
+        public BoltBejegyzes(Tej t, int mennyiseg, int ar)
+        {
+            this.t = t;
+            this.mennyiseg = mennyiseg;
+            this.ar = ar;
+        }
+
+        public Tej getT() {
+            return t;
+        }
+
+        public void setT(Tej t) {
+            this.t = t;
+        }
+
+        public int getMennyiseg() {
+            return mennyiseg;
+        }
+
+        public void setMennyiseg(int mennyiseg) {
+            this.mennyiseg = mennyiseg;
+        }
+
+        public int getAr() {
+            return ar;
+        }
+
+        public void setAr(int ar) {
+            this.ar = ar;
+        }
+
+        public void adMennyiseg(int mennyiseg)
+        {
+            int m = getMennyiseg();
+            m += mennyiseg;
+        }
+
+        public void levonMennyiseg(int mennyiseg)
+        {
+            int m = getMennyiseg();
+            m -= mennyiseg;
+        }
+
+    }
 }
