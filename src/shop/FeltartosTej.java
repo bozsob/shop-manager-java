@@ -7,8 +7,8 @@ import java.util.Date;
  */
 public class FeltartosTej extends Tej
 {
-    public FeltartosTej(long vonalKod, int urtartalom, String gyarto, Date szavatossagIdo, double zsirtartalom)
+    public FeltartosTej(long vonalKod, int urtartalom, String gyarto, Date szavatossagiIdo, double zsirTartalom)
     {
-        super(vonalKod, urtartalom, gyarto, szavatossagIdo, zsirtartalom);
+        super(vonalKod, urtartalom, gyarto, szavatossagiIdo, zsirTartalom);
     }
 }
