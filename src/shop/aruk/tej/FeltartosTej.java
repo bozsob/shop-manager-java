@@ -1,4 +1,6 @@
-package shop;
+package shop.aruk.tej;
+
+import shop.aruk.Tej;
 
 import java.util.Date;
 

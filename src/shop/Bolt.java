@@ -1,8 +1,10 @@
 package shop;
 
+import shop.aruk.Elelmiszer;
+import shop.aruk.Sajt;
+import shop.aruk.Tej;
+
 import java.util.Hashtable;
-import java.util.Map;
-import java.util.Vector;
 
 /**
  * Created by trixi on 2017.02.14..

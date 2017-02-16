@@ -1,4 +1,4 @@
-package shop;
+package shop.aruk;
 
 import java.util.Date;
 
