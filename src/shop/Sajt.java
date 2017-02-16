@@ -7,12 +7,18 @@ import java.util.Date;
  */
 public class Sajt extends Elelmiszer
 {
-    private double zsirTartalom;
+    protected double suly;
+    protected double zsirTartalom;
+    protected long vonalKod;
+    protected String gyarto;
+    protected Date szavatossagiIdo;
 
-    public Sajt(long vonalKod, String gyarto, Date szavatossagiIdo, double zsirTartalom)
+
+    public Sajt(long vonalKod, double suly, String gyarto, Date szavatossagiIdo, double zsirTartalom)
     {
         super(vonalKod, gyarto, szavatossagiIdo);
-        this.zsirTartalom = zsirTartalom
+        this.zsirTartalom = zsirTartalom;
+        this.suly = suly;
     }
 
     @Override
@@ -20,8 +26,21 @@ public class Sajt extends Elelmiszer
         return vonalKod;
     }
 
+    public double getSuly() {
+        return suly;
+    }
+
     public String getGyarto() {
         return gyarto;
+    }
+
+    @Override
+    public Date getSzavatossagiIdo() {
+        return szavatossagiIdo;
+    }
+
+    public double getZsirTartalom() {
+        return zsirTartalom;
     }
 
     @Override
@@ -37,17 +56,9 @@ public class Sajt extends Elelmiszer
     }
 
     @Override
-    public Date getSzavatossagiIdo() {
-        return szavatossagiIdo;
-    }
-
-    public double getZsirTartalom() {
-        return zsirTartalom;
-    }
-
-    @Override
     public String toString() {
-        return ("Gyártó: " + getGyarto() + "\n"
+        return ("Sajt súlya: " + getSuly()
+                + "Gyártó: " + getGyarto() + "\n"
                 + "Szavatossági idő: " + getSzavatossagiIdo() + "\n"
                 + "Zsírtartalom: " + getZsirTartalom() + "\n");
     }

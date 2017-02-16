@@ -5,7 +5,7 @@ import java.util.Date;
 /**
  * Created by trixi on 2017.02.14..
  */
-public abstract class Tej
+public abstract class Tej extends Elelmiszer
 {
 
     private final int LITER = 4;
@@ -17,16 +17,14 @@ public abstract class Tej
     protected long vonalKod;
     protected int urtartalom;
     protected String gyarto;
-    protected Date szavatossagIdo;
-    protected double zsirtartalom;
+    protected Date szavatossagiIdo;
+    protected double zsirTartalom;
 
-    public Tej(long vonalKod, int urtartalom, String gyarto, Date szavatossagIdo, double zsirtartalom)
+    public Tej(long vonalKod, int urtartalom, String gyarto, Date szavatossagiIdo, double zsirTartalom)
     {
-        this.vonalKod = vonalKod;
+        super(vonalKod, gyarto, szavatossagiIdo);
         this.urtartalom = urtartalom;
-        this.gyarto = gyarto;
-        this.szavatossagIdo = szavatossagIdo;
-        this.zsirtartalom = zsirtartalom;
+        this.zsirTartalom = zsirTartalom;
     }
 
     public long getVonalKod()
@@ -39,7 +37,7 @@ public abstract class Tej
         Date currentTime = new Date();
 
 
-        if(currentTime.before(getSzavatossagIdo()))
+        if(currentTime.before(getSzavatossagiIdo()))
         {
             return true;
         }
@@ -56,22 +54,22 @@ public abstract class Tej
         return gyarto;
     }
 
-    public Date getSzavatossagIdo()
+    public Date getSzavatossagiIdo()
     {
-        return szavatossagIdo;
+        return szavatossagiIdo;
     }
 
-    public double getZsirtartalom()
+    public double getZsirTartalom()
     {
-        return zsirtartalom;
+        return zsirTartalom;
     }
 
     public String toString()
     {
         return ("Űrtartalom: " + getUrtartalom() + "\n"
                 + "Gyártó: " + getGyarto() + "\n"
-                + "Szavatossági idő: " + getSzavatossagIdo() + "\n"
-                + "Zsírtartalom: " + getZsirtartalom() + "\n");
+                + "Szavatossági idő: " + getSzavatossagiIdo() + "\n"
+                + "Zsírtartalom: " + getZsirTartalom() + "\n");
                 //+  "Ár: " + getAr() + "\n");
     }
 }
