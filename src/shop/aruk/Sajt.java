@@ -1,7 +1,5 @@
 package shop.aruk;
 
-import shop.aruk.Elelmiszer;
-
 import java.util.Date;
 
 /**

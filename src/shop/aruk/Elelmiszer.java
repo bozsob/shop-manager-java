@@ -1,11 +1,13 @@
 package shop.aruk;
 
+import shop.Aru;
+
 import java.util.Date;
 
 /**
  * Created by trixi on 2017.02.15..
  */
-public abstract class Elelmiszer
+public abstract class Elelmiszer extends Aru
 {
     protected long vonalKod;
     protected String gyarto;
