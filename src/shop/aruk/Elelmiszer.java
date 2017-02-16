@@ -21,9 +21,8 @@ public abstract class Elelmiszer extends Aru
     }
 
     public abstract long getVonalKod();
-    public abstract boolean joMeg();
+    public abstract String getGyarto();
     public abstract Date getSzavatossagiIdo();
+    public abstract boolean joMeg();
     public abstract String toString();
-
-
 }

@@ -30,6 +30,7 @@ public class Sajt extends Elelmiszer
         return suly;
     }
 
+    @Override
     public String getGyarto() {
         return gyarto;
     }
